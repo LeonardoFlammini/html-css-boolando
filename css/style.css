@@ -19,13 +19,27 @@ body{
 .container {
   width: 90%;
   max-width: 1000px;
-  margin: 40px auto;
+  margin: 0 auto;
 }
 
 .d-flex {
   display: flex;
 }
 
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  padding-right: 5px;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+}
 
 
 /* Header  */
@@ -36,9 +50,6 @@ header{
   font-size: 0.95rem;
 }
 
-header .container {
-  margin: 0 auto;
-}
 
 header .menu{
   width: 100%;
@@ -50,19 +61,6 @@ header .menu{
 .categories,
 .icons {
   flex-basis: 25%;
-}
-
-.menu ul {
-  list-style: none;
-}
-
-.menu ul li {
-  display: inline-block;
-}
-
-li a {
-  color: white;
-  text-decoration: none;
 }
 
 
@@ -86,6 +84,7 @@ main .container {
   flex-wrap: wrap;
 	justify-content: center;
 	align-content: start;
+  margin: 40px auto;
 }
 
 
@@ -230,4 +229,24 @@ main .card {
 footer {
   background-color: var(--footer-color);
   color: white;
+  padding: 30px 0;
+}
+
+footer .container {
+  justify-content: space-between;
+}
+
+footer .company,
+footer .cta {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+footer .info a{
+  font-size: 0.8rem;
+}
+
+footer .menu a{
+  font-size: 1.2rem;
 }
