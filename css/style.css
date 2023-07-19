@@ -16,8 +16,8 @@ body{
 }
 
 .container {
-  width: 80%;
-  max-width: 800px;
+  width: 90%;
+  max-width: 1000px;
   margin: 40px auto;
 }
 
@@ -76,4 +76,90 @@ li a {
 
 .icons {
   flex-direction: row-reverse;
+}
+
+/* main  */
+
+main .container {
+  gap: 10px;
+}
+
+main .card {
+  width: calc(100% / 3);
+  cursor: pointer;
+  min-height: 300px;
+}
+
+.card .std-img {
+  position: relative;
+}
+
+.card .std-img .favourite {
+  position: absolute;
+  display: flex;
+  right: 0;
+  top: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card .favourite {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+
+}
+
+.card .std-img .box{
+  color: white;
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 50px;
+}
+
+.card .std-img .box .stb,
+.card .std-img .box .dsc {
+  padding: 5px 10px;
+}
+
+.card .std-img .box .dsc {
+  background-color: var(--red-discount);
+}
+.card .std-img .box .stb {
+  background-color: var(--green);
+}
+
+.card .details {
+  padding-top: 5px;
+}
+
+.card .details .brand {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.card .details .description {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.card .details .price.dsc {
+  color: var(--red-discount);
+  text-decoration: none;
+}
+
+.card .details .price{
+  padding-left: 5px;
+  text-decoration: line-through;
+}
+
+.card .details .price.dsc::after,
+.card .details .price::after{
+  content: "\20AC";
 }
