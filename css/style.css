@@ -8,6 +8,7 @@
   --red-header: #EF6630;
   --green: #3C8108;
   --red-discount: #ED462F;
+  --footer-color : #1A1A1A;
 
 }
 
@@ -83,20 +84,34 @@ li a {
 main .container {
   gap: 10px;
   flex-wrap: wrap;
-  justify-content: center;
+	justify-content: center;
+	align-content: start;
 }
+
+
+
+
+
+
+/* card empty  */
 
 main .card {
   width: 300px;
-  cursor: pointer;
   min-height: 300px;
+  cursor: pointer;
+  
 }
 
-.card .std-img {
+.card .std-img,
+.card .hover-img {
   position: relative;
 }
 
-.card .std-img .favourite {
+.card .hover-img {
+  display: none;
+}
+
+.card .favourite {
   position: absolute;
   display: flex;
   right: 0;
@@ -118,22 +133,23 @@ main .card {
 
 }
 
-.card .std-img .box{
+.card .box{
   color: white;
   font-size: 0.8rem;
   position: absolute;
   bottom: 50px;
+  display: none;
 }
 
-.card .std-img .box .stb,
-.card .std-img .box .dsc {
+.card .box .stb,
+.card .box .dsc {
   padding: 5px 10px;
 }
 
-.card .std-img .box .dsc {
+.card .box .dsc {
   background-color: var(--red-discount);
 }
-.card .std-img .box .stb {
+.card .box .stb {
   background-color: var(--green);
 }
 
@@ -164,4 +180,54 @@ main .card {
 .card .details .price.dsc::after,
 .card .details .price::after{
   content: "\20AC";
+}
+
+/* card discount  */
+
+.card.dsc .box {
+  display: block;
+}
+.card.dsc .box .stb {
+  display: none;
+}
+
+/* card sostenibility  */
+
+.card.stb .box {
+  display: block;
+}
+.card.stb .box .dsc {
+  display: none;
+}
+
+/* card discount sostenibility */
+
+.card.dsc-stb .box {
+  display: block;
+}
+
+.card.dsc-stb .box .stb {
+  display: inline-block;
+}
+
+
+/* hover  */
+
+.card:hover .std-img {
+  display: none;
+}
+
+.card:hover .hover-img {
+  display: block;
+}
+
+.favourite:hover {
+  color: var(--red-discount);
+}
+
+/* footer  */
+
+footer {
+  background-color: var(--footer-color);
+  color: white;
 }
