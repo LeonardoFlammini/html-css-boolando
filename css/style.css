@@ -82,10 +82,12 @@ li a {
 
 main .container {
   gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 main .card {
-  width: calc(100% / 3);
+  width: 300px;
   cursor: pointer;
   min-height: 300px;
 }
